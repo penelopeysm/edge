@@ -31,129 +31,59 @@ function! edge#get_configuration() "{{{
         \ }
 endfunction "}}}
 function! edge#get_palette(style, dim_foreground, colors_override) "{{{
-  if &background ==# 'dark' "{{{
-    if a:style ==# 'default' "{{{
-      let palette = {
-            \ 'black':      ['#202023',   '232'],
-            \ 'bg_dim':     ['#24262a',   '232'],
-            \ 'bg0':        ['#2c2e34',   '235'],
-            \ 'bg1':        ['#33353f',   '236'],
-            \ 'bg2':        ['#363944',   '237'],
-            \ 'bg3':        ['#3b3e48',   '237'],
-            \ 'bg4':        ['#414550',   '238'],
-            \ 'bg_grey':    ['#828a98',   '246'],
-            \ 'bg_red':     ['#ec7279',   '203'],
-            \ 'diff_red':   ['#55393d',   '52'],
-            \ 'bg_green':   ['#a0c980',   '107'],
-            \ 'diff_green': ['#394634',   '22'],
-            \ 'bg_blue':    ['#6cb6eb',   '110'],
-            \ 'diff_blue':  ['#354157',   '17'],
-            \ 'bg_purple':  ['#d38aea',   '176'],
-            \ 'diff_yellow':['#4e432f',   '54'],
-            \ 'red':        ['#ec7279',   '203'],
-            \ 'yellow':     ['#deb974',   '179'],
-            \ 'green':      ['#a0c980',   '107'],
-            \ 'cyan':       ['#5dbbc1',   '72'],
-            \ 'blue':       ['#6cb6eb',   '110'],
-            \ 'purple':     ['#d38aea',   '176'],
-            \ 'none':       ['NONE',      'NONE']
-            \ } "}}}
-    elseif a:style ==# 'aura' "{{{
-      let palette = {
-            \ 'black':      ['#202023',   '232'],
-            \ 'bg_dim':     ['#24262d',   '232'],
-            \ 'bg0':        ['#2b2d37',   '235'],
-            \ 'bg1':        ['#333644',   '236'],
-            \ 'bg2':        ['#363a49',   '237'],
-            \ 'bg3':        ['#3a3e4e',   '237'],
-            \ 'bg4':        ['#404455',   '238'],
-            \ 'bg_grey':    ['#7e869b',   '246'],
-            \ 'bg_red':     ['#ec7279',   '203'],
-            \ 'diff_red':   ['#55393d',   '52'],
-            \ 'bg_green':   ['#a0c980',   '107'],
-            \ 'diff_green': ['#394634',   '22'],
-            \ 'bg_blue':    ['#6cb6eb',   '110'],
-            \ 'diff_blue':  ['#354157',   '17'],
-            \ 'bg_purple':  ['#d38aea',   '176'],
-            \ 'diff_yellow':['#4e432f',   '54'],
-            \ 'red':        ['#ec7279',   '203'],
-            \ 'yellow':     ['#deb974',   '179'],
-            \ 'green':      ['#a0c980',   '107'],
-            \ 'cyan':       ['#5dbbc1',   '72'],
-            \ 'blue':       ['#6cb6eb',   '110'],
-            \ 'purple':     ['#d38aea',   '176'],
-            \ 'none':       ['NONE',      'NONE']
-            \ } "}}}
-    elseif a:style ==# 'neon' "{{{
-      let palette = {
-            \ 'black':      ['#202023',   '232'],
-            \ 'bg_dim':     ['#252630',   '232'],
-            \ 'bg0':        ['#2b2d3a',   '235'],
-            \ 'bg1':        ['#333648',   '236'],
-            \ 'bg2':        ['#363a4e',   '237'],
-            \ 'bg3':        ['#393e53',   '237'],
-            \ 'bg4':        ['#3f445b',   '238'],
-            \ 'bg_grey':    ['#7a819d',   '246'],
-            \ 'bg_red':     ['#ec7279',   '203'],
-            \ 'diff_red':   ['#55393d',   '52'],
-            \ 'bg_green':   ['#a0c980',   '107'],
-            \ 'diff_green': ['#394634',   '22'],
-            \ 'bg_blue':    ['#6cb6eb',   '110'],
-            \ 'diff_blue':  ['#354157',   '17'],
-            \ 'bg_purple':  ['#d38aea',   '176'],
-            \ 'diff_yellow':['#4e432f',   '54'],
-            \ 'red':        ['#ec7279',   '203'],
-            \ 'yellow':     ['#deb974',   '179'],
-            \ 'green':      ['#a0c980',   '107'],
-            \ 'cyan':       ['#5dbbc1',   '72'],
-            \ 'blue':       ['#6cb6eb',   '110'],
-            \ 'purple':     ['#d38aea',   '176'],
-            \ 'none':       ['NONE',      'NONE']
-            \ }
-    endif "}}}
-    if a:dim_foreground "{{{
-      let palette_fg = {
-            \ 'fg':         ['#97a4b5',   '250'],
-            \ 'grey':       ['#677287',   '246'],
-            \ 'grey_dim':   ['#4f5868',   '240'],
-            \ } " }}}
-    else " {{{
-      let palette_fg = {
-            \ 'fg':         ['#c5cdd9',   '250'],
-            \ 'grey':       ['#758094',   '246'],
-            \ 'grey_dim':   ['#535c6a',   '240'],
-            \ }
-    endif "}}}
-    let palette = extend(palette, palette_fg) "}}}
-  else "{{{
+  if &background ==# 'light' "{{{
     let palette = {
-          \ 'black':      ['#dde2e7',   '253'],
-          \ 'bg_dim':     ['#e8ebf0',   '254'],
-          \ 'bg0':        ['#fafafa',   '231'],
-          \ 'bg1':        ['#eef1f4',   '255'],
-          \ 'bg2':        ['#e8ebf0',   '254'],
-          \ 'bg3':        ['#e8ebf0',   '253'],
-          \ 'bg4':        ['#dde2e7',   '253'],
+          \ '...General foreground and background...': [],
+          \ 'fg':         ['#8a7178',   '240'],
+          \ 'bg0':        ['#faf5f8',   '231'],
+          \
+          \ '...Syntax highlighting...': [],
+          \ 'red':        ['#eb6c7f',   '167'],
+          \ 'yellow':     ['#cea14b',   '172'],
+          \ 'blue':       ['#5dade2',   '68'],
+          \ 'green':      ['#53b865',   '107'],
+          \ 'purple':     ['#cc89d9',   '134'],
+          \ 'cyan':       ['#409fab',   '73'],
+          \
+          \ '...Folds foreground and background...': [],
+          \ 'grey':       ['#bfa1a9',   '245'],
+          \ 'bg1':        ['#faf0f7',   '255'],
+          \
+          \ '...Various other background colours...': [],
+          \ 'bg_green':   ['#1bbf7d',   '107'],
+          \ 'bg_blue':    ['#59a4db',   '68'],
+          \ 'bg_red':     ['#ee718b',   '167'],
+          \ 'bg_purple':  ['#bc7af3',   '134'],
+          \ '...Background for visually selected text...': [],
+          \ 'bg3':        ['#f0e8f0',   '253'],
+          \ '...Background for matching parens etc...': [],
+          \ 'bg4':        ['#f0e8f0',   '253'],
+          \
+          \ '...Lightline (I made these different variables...': [],
+          \ 'bg_normal':    ['#e063b9',   '107'],
+          \ 'bg_insert':    ['#2ab0f7',   '134'],
+          \ 'bg_command':   ['#b46cf0',   '68'],
+          \ 'bg_visual':    ['#68ba7d',   '167'],
+          \ 'bg_replace':   ['#bc7af3',   '134'],
+          \ 'bg_terminal':  ['#bc7af3',   '134'],
+          \ 'bg_lightline': ['#f7e6f2',   '253'],
+          \
+          \ '...Diffs...': [],
+          \ 'diff_red':   ['#f5dfdf',   '217'],
+          \ 'diff_green': ['#d9edd8',   '150'],
+          \ 'diff_blue':  ['#dbebee',   '153'],
+          \ 'diff_yellow':['#fcf5e5',   '183'],
+          \
+          \ '...I have not changed the stuff below...': [],
           \ 'bg_grey':    ['#bcc5cf',   '246'],
-          \ 'bg_red':     ['#e17373',   '167'],
-          \ 'diff_red':   ['#f6e4e4',   '217'],
-          \ 'bg_green':   ['#76af6f',   '107'],
-          \ 'diff_green': ['#e5eee4',   '150'],
-          \ 'bg_blue':    ['#6996e0',   '68'],
-          \ 'diff_blue':  ['#e3eaf6',   '153'],
-          \ 'bg_purple':  ['#bf75d6',   '134'],
-          \ 'diff_yellow':['#f0ece2',   '183'],
-          \ 'fg':         ['#4b505b',   '240'],
-          \ 'red':        ['#d05858',   '167'],
-          \ 'yellow':     ['#be7e05',   '172'],
-          \ 'green':      ['#608e32',   '107'],
-          \ 'cyan':       ['#3a8b84',   '73'],
-          \ 'blue':       ['#5079be',   '68'],
-          \ 'purple':     ['#b05ccc',   '134'],
-          \ 'grey':       ['#8790a0',   '245'],
+          \ 'black':      ['#dde2e7',   '253'],
           \ 'grey_dim':   ['#bac3cb',   '249'],
+          \ 'bg_dim':     ['#e8ebf0',   '254'],
+          \ 'bg2':        ['#e8ebf0',   '254'],
           \ 'none':       ['NONE',      'NONE']
           \ } "}}}
+  else
+    throw 'To use this fork of edge, background must be set to light'
   endif
   return extend(palette, a:colors_override)
 endfunction "}}}

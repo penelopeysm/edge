@@ -15,82 +15,82 @@ endif
 "}}}
 " Definition: {{{
 let s:tab_l_fg = s:palette.fg
-let s:tab_l_bg = s:palette.bg4
+let s:tab_l_bg = s:palette.bg_lightline
 let s:tab_r_fg = s:palette.purple
-let s:tab_r_bg = s:palette.bg4
+let s:tab_r_bg = s:palette.bg_lightline
 let s:tab_sel_fg = s:palette.bg0
 let s:tab_sel_bg = s:palette.bg_purple
 let s:tab_middle_fg = s:palette.fg
 let s:tab_middle_bg = s:palette.bg1
 
 let s:warningfg = s:palette.bg0
-let s:warningbg = s:palette.yellow
+let s:warningbg = s:palette.bg_replace
 let s:errorfg = s:palette.bg0
-let s:errorbg = s:palette.bg_red
+let s:errorbg = s:palette.bg_visual
 
 let s:normal_l1_fg = s:palette.bg0
-let s:normal_l1_bg = s:palette.bg_green
+let s:normal_l1_bg = s:palette.bg_normal
 let s:normal_l2_fg = s:palette.fg
-let s:normal_l2_bg = s:palette.bg4
+let s:normal_l2_bg = s:palette.bg_lightline
 let s:normal_r1_fg = s:palette.bg0
-let s:normal_r1_bg = s:palette.bg_green
+let s:normal_r1_bg = s:palette.bg_normal
 let s:normal_r2_fg = s:palette.fg
-let s:normal_r2_bg = s:palette.bg4
+let s:normal_r2_bg = s:palette.bg_lightline
 let s:normal_middle_fg = s:palette.fg
 let s:normal_middle_bg = s:palette.bg1
 
 let s:insert_l1_fg = s:palette.bg0
-let s:insert_l1_bg = s:palette.bg_blue
+let s:insert_l1_bg = s:palette.bg_insert
 let s:insert_l2_fg = s:palette.fg
-let s:insert_l2_bg = s:palette.bg4
+let s:insert_l2_bg = s:palette.bg_lightline
 let s:insert_r1_fg = s:palette.bg0
-let s:insert_r1_bg = s:palette.bg_blue
+let s:insert_r1_bg = s:palette.bg_insert
 let s:insert_r2_fg = s:palette.fg
-let s:insert_r2_bg = s:palette.bg4
+let s:insert_r2_bg = s:palette.bg_lightline
 let s:insert_middle_fg = s:palette.fg
 let s:insert_middle_bg = s:palette.bg1
 
 let s:visual_l1_fg = s:palette.bg0
-let s:visual_l1_bg = s:palette.bg_red
+let s:visual_l1_bg = s:palette.bg_visual
 let s:visual_l2_fg = s:palette.fg
-let s:visual_l2_bg = s:palette.bg4
+let s:visual_l2_bg = s:palette.bg_lightline
 let s:visual_r1_fg = s:palette.bg0
-let s:visual_r1_bg = s:palette.bg_red
+let s:visual_r1_bg = s:palette.bg_visual
 let s:visual_r2_fg = s:palette.fg
-let s:visual_r2_bg = s:palette.bg4
+let s:visual_r2_bg = s:palette.bg_lightline
 let s:visual_middle_fg = s:palette.fg
 let s:visual_middle_bg = s:palette.bg1
 
 let s:replace_l1_fg = s:palette.bg0
-let s:replace_l1_bg = s:palette.yellow
+let s:replace_l1_bg = s:palette.bg_replace
 let s:replace_l2_fg = s:palette.fg
-let s:replace_l2_bg = s:palette.bg4
+let s:replace_l2_bg = s:palette.bg_lightline
 let s:replace_r1_fg = s:palette.bg0
-let s:replace_r1_bg = s:palette.yellow
+let s:replace_r1_bg = s:palette.bg_replace
 let s:replace_r2_fg = s:palette.fg
-let s:replace_r2_bg = s:palette.bg4
+let s:replace_r2_bg = s:palette.bg_lightline
 let s:replace_middle_fg = s:palette.fg
 let s:replace_middle_bg = s:palette.bg1
 
 let s:command_l1_fg = s:palette.bg0
-let s:command_l1_bg = s:palette.bg_red
+let s:command_l1_bg = s:palette.bg_command
 let s:command_l2_fg = s:palette.fg
-let s:command_l2_bg = s:palette.bg4
+let s:command_l2_bg = s:palette.bg_lightline
 let s:command_r1_fg = s:palette.bg0
-let s:command_r1_bg = s:palette.bg_red
+let s:command_r1_bg = s:palette.bg_command
 let s:command_r2_fg = s:palette.fg
-let s:command_r2_bg = s:palette.bg4
+let s:command_r2_bg = s:palette.bg_lightline
 let s:command_middle_fg = s:palette.fg
 let s:command_middle_bg = s:palette.bg1
 
 let s:terminal_l1_fg = s:palette.bg0
-let s:terminal_l1_bg = s:palette.bg_green
+let s:terminal_l1_bg = s:palette.bg_terminal
 let s:terminal_l2_fg = s:palette.fg
-let s:terminal_l2_bg = s:palette.bg4
+let s:terminal_l2_bg = s:palette.bg_lightline
 let s:terminal_r1_fg = s:palette.bg0
-let s:terminal_r1_bg = s:palette.bg_green
+let s:terminal_r1_bg = s:palette.bg_terminal
 let s:terminal_r2_fg = s:palette.fg
-let s:terminal_r2_bg = s:palette.bg4
+let s:terminal_r2_bg = s:palette.bg_lightline
 let s:terminal_middle_fg = s:palette.fg
 let s:terminal_middle_bg = s:palette.bg1
 
